@@ -4,6 +4,9 @@
 @import "fonts";
 @import "settings";
 
+//компоненты страниц
+@import "./components/slider-nav";
+
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/nav";
@@ -14,3 +17,19 @@
 @import "./components/missions";
 @import "./components/services-section";
 @import "./components/form-field";
+@import "./components/portfolio-section";
+@import "./components/learn-more";
+@import "./components/partners";
+@import "./components/testimonials";
+@import "./components/facts";
+@import "./components/recent-news";
+@import "./components/contacts-section";
+@import "./components/footer";
+@import "./components/social";
+@import "./components/breadcrumbs";
+@import "./components/page-hero";
+@import "./components/services-content";
+@import "./components/how-we-do";
+@import "./components/services-benefits";
+@import "./components/related-projects";
+@import "./components/portfolio-item";
