@@ -1,0 +1,106 @@
+.pricing{
+   position: relative;
+   padding-top: 80px;
+   padding-bottom: 40px;
+   background-color: #F4F5F7;
+   &__descr{
+      margin-bottom: 60px;
+   }
+   &__decorate{
+      position: absolute;
+      left: -8px;
+      top: 0;
+   }
+}
+.table-wrapper{
+   position: relative;
+   z-index: 5;
+   width: 100%;
+   background: var(--color-light);
+   border: 1px solid #E5E8ED;
+   box-shadow: var(--main-shadow);
+   border-radius: 4px;
+}
+.table{
+   border-collapse: collapse;
+   width: 100%;
+
+   &__heading{
+      margin-bottom: 2px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: var(--color-ebony);
+   }
+   &__per{
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      color: var(--color-storm);
+   }
+   &__body{
+      .table__row{
+         &:nth-child(odd){
+            background-color: #F4F5F7;
+         }
+         &:last-child{
+            .table__col{
+               padding: 30px 0;
+            }
+         }
+      }
+   }
+
+   &__th{
+      padding-top: 31px;
+      padding-bottom: 24px;
+      padding-right: 20px;
+      &:first-child{
+         vertical-align: bottom;
+         padding-left: 24px;
+         font-weight: 700;
+         font-size: 18px;
+         line-height: 150%;
+         color: var(--color-ebony);
+         text-align: left;
+      }
+   }
+   &__col{
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-gray);
+      padding: 16px 0;
+      padding-right: 10px;
+      vertical-align: middle;
+      text-align: center;
+      &:first-child{
+         padding-left: 24px;
+         text-align: left;
+      }
+      .btn{
+         padding: 0 20px;
+         font-weight: 700;
+         font-size: 12px;
+         line-height: 36px;
+         letter-spacing: 0.5px;
+         text-transform: uppercase;
+      }
+   }
+   &__check{
+      vertical-align: middle;
+      font-size: 0;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/table-check.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+   }
+   &__text{
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-ebony);
+   }
+}
