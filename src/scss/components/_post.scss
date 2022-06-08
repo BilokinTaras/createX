@@ -1,0 +1,110 @@
+.post{
+   &__cover{
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      margin-top: -79px;
+   }
+   &__wrapper{
+      max-width: 840px;
+      padding: 0 15px;
+      margin: 0 auto;
+   }
+   &__share{
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-ebony);
+      span{
+         margin-right: 10px;
+      }
+      svg{
+         fill: var(--color-storm);
+         opacity: 1;
+      }
+   }
+   &__content{
+      padding-top: 80px;
+      padding-bottom: 60px;
+      *{
+         margin-bottom: 28px;
+         font-size: 16px;
+         margin-bottom: 28px;
+         line-height: 160%;
+         color: var(--color-gray);
+
+         &:last-child{
+            margin-bottom: 0;
+         }
+      }
+      h2{
+         font-weight: 700;
+         margin-bottom: 25px;
+         font-size: 20px;
+         line-height: 150%;
+         color: var(--color-ebony);
+      }
+      h3{
+         font-weight: 700;
+         font-size: 18px;
+         margin-bottom: 25px;
+         line-height: 150%;
+         color: var(--color-ebony);
+      }
+      p{
+         margin: 0;
+      }
+      blockquote{
+         margin: 0;
+         position: relative;
+         padding: 21px 58px;
+         margin-bottom: 28px;
+         padding-right: 5px;
+         font-weight: 700;
+         font-size: 20px;
+         line-height: 150%;
+         color: var(--color-ebony);
+         &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 21px;
+            width: 28px;
+            height: 28px;
+            background-image: url("../img/braces.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+      }
+      ul{
+         margin: 0;
+         padding: 0;
+         list-style-type: none;
+         padding-left: 32px;
+         margin-bottom: 28px;
+         font-size: 16px;
+         line-height: 160%;
+         color: var(--color-gray);
+         li{
+            position: relative;
+            padding-left: 32px;
+            &::before{
+               content: "";
+               position: absolute;
+               width: 16px;
+               height: 16px;
+               left: 0;
+               top: 4px;
+               background-image: url("../img/check-list.svg");
+               background-size: cover;
+               background-repeat: no-repeat;
+            }
+            &:not(:last-child){
+               margin-bottom: 3px;
+            }
+         }
+      }
+   }
+}

@@ -6,6 +6,7 @@
 
 //компоненты страниц
 @import "./components/slider-nav";
+@import "./components/social";
 
 // подключения компонентов страницы
 @import "./components/header";
@@ -25,7 +26,6 @@
 @import "./components/recent-news";
 @import "./components/contacts-section";
 @import "./components/footer";
-@import "./components/social";
 @import "./components/breadcrumbs";
 @import "./components/page-hero";
 @import "./components/services-content";
@@ -46,3 +46,9 @@
 @import "./components/worldwide";
 @import "./components/positions-content";
 @import "./components/employee-benefits";
+@import "./components/categories";
+@import "./components/news-article";
+@import "./components/post";
+@import "./components/post-comments";
+@import "./components/comment";
+@import "./components/post-form";
