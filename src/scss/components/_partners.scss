@@ -10,6 +10,12 @@
    &__title{
       margin-bottom: 60px;
    }
+   &__link{
+      &:focus{
+         outline: 2px solid var(--color-primary);
+         outline-offset: 2px;
+       }
+   }
    &--about{
       padding: 120px 0;
       background-color: var(--color-light);

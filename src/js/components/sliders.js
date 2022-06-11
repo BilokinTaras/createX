@@ -120,16 +120,20 @@ if(relatedSlider){
  });
 }
 
+const testimonialsItems = document.querySelector('.testimonials__items');
 
-const testimonialsSlider  = new Swiper('.testimonials__items', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: '.testimonials__next',
-    prevEl: '.testimonials__prev',
-  },
-});
+if(testimonialsItems){
+  const testimonialsSlider  = new Swiper(testimonialsItems, {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+      nextEl: '.testimonials__next',
+      prevEl: '.testimonials__prev',
+    },
+  });
+}
+
 const workImages = document.querySelector('.work-images-slider');
 
 if(workImages){
@@ -180,7 +184,33 @@ if(historySlider){
       workSlider.slideTo(index);
     });
   });
-
 }
+
+
+  const heroSlider  = new Swiper('.hero-slider', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.hero__next',
+      prevEl: '.hero__prev',
+    },
+    autoplay:{
+      delay: 1000,
+    },
+    pagination: {
+      el: '.hero__pag',
+      type: 'bullets',
+      clickable: true
+    },
+    on:{
+      init: function(){
+        const paginationBullets = document.querySelectorAll('.hero__pag .swiper-pagination-bullet');
+
+        paginationBullets.forEach(el => {
+          el.innerHTML = `<span class="hero__bar"></span>`;
+        });
+      }
+     },
+  });
+
 
 

@@ -30,6 +30,16 @@
          border-color: currentColor;
          color: var(--color-primary)
       }
+      &:focus{
+         outline: 2px solid var(--color-primary);
+         outline-offset: 2px;
+       }
+       &:hover{
+          color: var(--color-primary);
+       }
+       &:active{
+         color: var(--color-active);
+      }
    }
 }
 .categories-list{
@@ -68,6 +78,16 @@
       }
       &--active{
          color: var(--color-primary);
+      }
+      &:focus{
+         outline: 2px solid var(--color-primary);
+         outline-offset: 2px;
+       }
+       &:hover{
+          color: var(--color-primary);
+       }
+       &:active{
+         color: var(--color-active);
       }
    }
 }

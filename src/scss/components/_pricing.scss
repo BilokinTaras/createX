@@ -85,6 +85,9 @@
          line-height: 36px;
          letter-spacing: 0.5px;
          text-transform: uppercase;
+         &:focus{
+            outline: 2px solid var(--color-primary);
+         }
       }
    }
    &__check{

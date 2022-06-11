@@ -21,6 +21,10 @@
       &::placeholder{
          color: #9A9CA5;
       }
+      &:focus{
+         outline: 2px solid var(--color-primary);
+         outline-offset: 2px;
+       }
       &--big{
          padding-top: 10px;
          height: 66px;

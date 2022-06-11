@@ -5,6 +5,7 @@
    background: var(--color-light);
    box-shadow: var(--main-shadow);
    border-radius: 4px;
+   transition: transform 0.3s ease-in-out;
 
    &__content{
       @include flex-column-center;
@@ -26,7 +27,8 @@
       color: var(--color-storm);
    }
    &__btn{
-      display: none;
+      margin-bottom: -68px;
+/*       display: none; */
       margin-top: 24px;
       font-weight: 700;
       font-size: 14px;
@@ -36,5 +38,17 @@
       color: var(--color-primary);
       border: 1px solid currentColor;
       border-radius: 4px;
+      transition: margin-bottom 0.3s ease-in-out;
+      will-change: margin;
+   }
+   &:focus{
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+   &:hover{
+      transform: translateY(-3px);
+      .portfolio-item__btn{
+         margin-bottom: 0;
+      }
    }
 }

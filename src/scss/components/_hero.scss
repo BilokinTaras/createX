@@ -1,11 +1,4 @@
 .hero{
-   padding-top: 220px;
-   padding-bottom: 354px;
-   background-color: var(--color-gray);
-   background: url("../img/hero.jpg");
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
    &__content{
       max-width: 590px;
    }
@@ -16,4 +9,93 @@
          }
       }
    }
+   &__next{
+      position: absolute;
+      right: 32px;
+      top: 50%;
+      z-index: 10;
+      background-color: var(--color-light);
+      transform: translateY(-50%);
+   }
+   &__prev{
+      position: absolute;
+      left: 32px;
+      top: 50%;
+      z-index: 10;
+      background-color: var(--color-light);
+      transform: translateY(-50%);
+   }
+   
+   &__pag{
+      counter-reset: pag;
+      display: flex;
+      left: calc((100% - 1260px) / 2) !important;
+      bottom: 120px !important;
+      .swiper-pagination-bullet{
+         display: flex;
+         flex-direction: column;
+         border-radius: 0;
+         opacity: 1;
+         width: 178px;
+         text-align: left;
+         background-color: transparent;
+         height: auto;
+         &::before{
+           counter-increment: pag;
+           content: "0" counter(pag);
+           font-weight: 700;
+           font-size: 28px;
+           line-height: 150%;
+           color: rgba(#FFFFFF, 0.3);
+           transition: color 0.3s ease-in-out;
+         }
+         &::after{
+            display: none;
+         }
+      }
+   }
+   &__bar{
+      position: relative;
+      overflow: hidden;
+      border-radius: 100%;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(#fff, 0.3);
+      &::after{
+         content: "";
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: var(--color-light);
+         transform-origin: left;
+         transform: scaleX(0);
+         transform: transform 0.3s ease-in-out;
+      }
+   }
+}
+.swiper-pagination-bullet-active{
+   &::before{
+      color: var(--color-light) !important;
+   }
+   .hero__bar{
+      background-color: var(--color-light);
+      &::after{
+         transform: scaleX(1);
+      }
+   }
+}
+.hero-slider{
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+}
+.hero-slide{
+   padding-top: 220px;
+   padding-bottom: 354px;
+   background-color: var(--color-gray);
+   background: url("../img/hero.jpg");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
 }

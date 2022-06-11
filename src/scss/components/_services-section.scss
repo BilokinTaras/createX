@@ -28,6 +28,7 @@
    box-shadow: var(--main-shadow);
    border-radius: 4px;
 
+   
    &--construct{
       &::before{
          background-image: url("../img/services-1.png");
@@ -64,6 +65,10 @@
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
    }
+   &:focus{
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
 
    &__content{
       @include flex-column-center;
