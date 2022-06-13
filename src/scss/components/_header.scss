@@ -13,10 +13,38 @@
       top: 0;
       width: 100%;
    }
+   &__nav{
+      @include tablet{
+         position: fixed;
+         left: 0;
+         top: 0;
+         z-index: 1000;
+         width: 80%;
+         padding: 30px;
+         height: 100vh;
+         overflow-y: auto;
+         display: block;
+         background-color: var(--color-light);
+         transform: translateX(-150%);
+         transition: transform 0.3s ease-in-out;
+         &--active{
+            transform: none;
+         }
+      }
+      @include mobile{
+         padding: 20px;
+      }
+   }
 }
 .logo{
    &:focus{
       outline-offset: 2px solid var(--color-primary);
       outline: 1px solid var(--color-primary);
+   }
+   @include minidesk{
+      max-width: 100px;
+   }
+   @include tablet{
+      max-width: none;
    }
 }

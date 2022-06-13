@@ -6,14 +6,31 @@
       align-items: flex-end;
       justify-content: space-between;
       margin-bottom: 48px;
+      @include mobile{
+         display: block;
+      }
    }
    &__title{
       margin: 0;
       padding-bottom: 12px;
       max-width: 710px;
+      @include tablet {
+         margin-bottom: 15px;
+         padding-bottom: 0;
+         font-size: 40px;
+         line-height: 55px;
+      }
+      @include mobile{
+         max-width: none;
+         font-size: 28px;
+         line-height: 40px;
+      }
    }
    &__slider-nav{
       transform: translateX(12px);
+      @include mobile{
+         transform: none;
+      }
    }
    &__learn{
       margin-top: 80px;
@@ -21,6 +38,10 @@
    &__items{
       padding: 100px;
       margin: -100px;
+      @include middledesk{
+         margin: 0;
+         padding: 0;
+      }
 
       .swiper-slide{
          opacity: 0;
@@ -32,5 +53,8 @@
          opacity: 1;
          visibility: visible;
       }
+   }
+   @include mobile{
+      padding: 40px 0;
    }
 }

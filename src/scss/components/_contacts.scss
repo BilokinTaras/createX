@@ -4,10 +4,17 @@
    &__content{
       display: flex;
       justify-content: space-between;
+      @include tablet{
+         display: block;
+      }
    }
    &__image{
       flex-shrink: 0;
       margin-right: 20px;
+      @include tablet{
+         margin-right: 0;
+         margin-bottom: 30px;
+      }
    }
 }
 .form-contacts{
@@ -18,6 +25,9 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 23px;
+      @include mobile{
+         display: block;
+      }
    }
 
 
@@ -38,6 +48,12 @@
       margin-bottom: 0px;
       &--big{
          width: 100%;
+      }
+      @include mobile{
+         width: 100%;
+         &:not(:last-child){
+            margin-bottom: 20px;
+         }
       }
    }
    &__fields{
@@ -66,9 +82,16 @@
             top: 4px;
          }
       }
+      @include mobile{
+         flex-direction: column;
+         align-items: flex-start;
+      }
    }
    &__checkbox{
       max-width: 315px;
+      @include mobile{
+         margin-bottom: 20px;
+      }
    }
    &__radio{
       &:not(:last-child){
@@ -128,6 +151,9 @@
    }
    .choices__list--dropdown{
       background-color: var(--color-athens);
+   }
+   @include tablet{
+      width: 100%;
    }
 }
 .form-contacts .form-field__input--big{

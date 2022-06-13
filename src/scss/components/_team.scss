@@ -34,6 +34,9 @@
             visibility: visible;
          }
       }
+      @include tablet{
+         grid-column: 6 span;
+      }
    }
    &__text{
       font-size: 18px;

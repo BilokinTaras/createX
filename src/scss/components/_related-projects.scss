@@ -7,6 +7,10 @@
       align-items: flex-end;
       justify-content: space-between;
       margin-bottom: 48px;
+      @include mobile{
+         display: block;
+         margin-bottom: 25px;
+      }
    }
    &__title{
       margin: 0;
@@ -15,6 +19,9 @@
    }
    &__slider-nav{
       transform: translateX(12px);
+      @include mobile{
+         transform: none;
+      }
    }
    &__learn{
       margin-top: 80px;
@@ -32,6 +39,15 @@
       .slider-visible{
          opacity: 1;
          visibility: visible;
+      }
+      .portfolio-item__title{
+         @include minitablet{
+            min-height: 52px;
+         }
+      }
+      @include minidesk{
+         padding: 0;
+         margin: 0;
       }
    }
 }

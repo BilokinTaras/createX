@@ -5,6 +5,11 @@
       overflow: hidden;
       grid-column: 8 span;
    }
+   &__content{
+      @include minitablet{
+         display: block;
+      }
+   }
    &__top{
       display: flex;
       justify-content: space-between;
@@ -81,5 +86,11 @@
       &--active{
          color: var(--color-primary);
       }
+      @include tablet{
+         font-size: 22px;
+      }
+   }
+   @include minitablet{
+      margin-bottom: 30px;
    }
 }

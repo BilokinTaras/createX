@@ -8,6 +8,9 @@
    &__btn {
       width: 390px;
       transform: translateY(13px);
+      @include mobile{
+         width: 100%;
+      }
     }
     &__centered {
       margin-bottom: -13px;
@@ -22,6 +25,16 @@
       grid-template-columns: repeat(3, 1fr); 
       margin-bottom: 27px;
       gap: calc(var(--mission-gap) * 2);
+
+      @include tablet{
+         --mission-gap: 30px;
+      }
+      @include minitablet{
+         --mission-gap: 10px;
+      }
+      @include mobile{
+         display: block;
+      }
    }
    &__item{
       position: relative;
@@ -51,6 +64,14 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            @include tablet{
+               display: none;
+            }
+         }
+      }
+      @include mobile{
+         &:not(:last-child){
+            margin-bottom: 30px;
          }
       }
    }

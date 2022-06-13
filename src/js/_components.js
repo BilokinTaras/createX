@@ -5,4 +5,5 @@ import './components/selects';
 import './components/smooth';
 import './components/video';
 import './components/modals';
+import './components/burger';
 
